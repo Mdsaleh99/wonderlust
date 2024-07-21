@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: "Plus Jakarta Sans", sans-serif,  !important;   
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navbar */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-airbnb {
+    font-size: 2.5rem;
+    color: rgb(13, 185, 249);
+    font-weight: 800;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.logo-name {
+    font-weight: 600 !important;
+    font-size: 1.5rem;
+}
+
+
+/* Footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+
+.f-info-links,
+.f-info-social, .f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-social i {
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+}
+
+.f-info {
+    background-color: #ebebeb;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+
+
+/* Card */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: #222222;
+}
+
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New Page */
+.add-btn {
+    background-color: #222222 !important;
+    border: none !important;
+}
+
+
+/* show page */
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}

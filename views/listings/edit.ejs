@@ -1,0 +1,93 @@
+<% layout('/layouts/boilerplate') %>
+<!-- content change karne k liye ye uppar wala code lihk te hai  -->
+<!-- <% %> ->'Scriptlet' tag, for control-flow, no output -->
+<!-- Control Flow: Inside the <% %> tags, you can write JavaScript code to perform various control-flow       operations, such as conditionals (if, else, else if), loops (for, while), and other logic.
+
+No Output: Unlike <%= %> and <%- %>, the code inside <% %> tags doesn't directly output anything into the template. It's used purely for executing JavaScript logic. -->
+
+<!-- https://ejs.co/ -->
+
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>Edit your Listing</h3>
+      <form method="post" action="/listings/<%= listing._id %>?_method=put" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            value="<%= listing.title %>"
+            name="listing[title]"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            type="text"
+            name="listing[description]"
+            class="form-control"
+            required
+          >
+<%= listing.description %></textarea
+          >
+        </div>
+
+        <div>
+          Original listing image <br>
+          <img src="<%= originalImageUrl %>" alt="">
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input
+            type="file"
+            
+            name="listing[image][url]"
+            class="form-control"
+            
+          />
+        </div>
+
+        <div class="row" class="mb-3">
+          <div class="col-md-4">
+            <label for="price" class="form-label">price</label>
+            <input
+              type="number"
+              value="<%= listing.price %>"
+              name="listing[price]"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="col-md-8 mb-3" >
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              value="<%= listing.country %>"
+              name="listing[country]"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            value="<%= listing.location %>"
+            name="listing[location]"
+            class="form-control"
+            required
+          />
+        </div>
+        
+        <button class="btn btn-dark mt-3 mb-3">Edit</button>
+      </form>
+    </div>
+  </div>
+</body>
